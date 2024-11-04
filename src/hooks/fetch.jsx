@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_KEY = "41ee00ef54c639e104c9b60ce5d3736b";
+const API_KEY = "f498cd6e0bf1e35ce9129455697a2242";
 const BASE_URL = "https://api.themoviedb.org/3";
 
 const useFetchData = (endpoint, options = {}) => {

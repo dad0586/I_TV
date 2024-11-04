@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import "./main.scss";
 
-const API_KEY = "41ee00ef54c639e104c9b60ce5d3736b"; // Replace with your TMDB API key
+const API_KEY = "41ee00ef54c639e104c9b60ce5d3736b";
 const BASE_URL = "https://api.themoviedb.org/3";
 
 const Anime = () => {
