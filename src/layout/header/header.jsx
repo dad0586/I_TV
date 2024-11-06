@@ -17,7 +17,6 @@ const Header = () => {
                         <Link to="/filmlar"> Filmlar </Link>
                         <Link to="/seriallar"> Seriallar </Link>
                         <Link to="/multfilmlar"> Multfilmlar </Link>
-                        <Link to="/anime"> Anime </Link>
                         <Link to="/obunalar"> Obunalar </Link>
                         <Link to="/boshqalar"> Boshqalar </Link>
                     </div>

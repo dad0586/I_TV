@@ -1,22 +1,43 @@
-import React, { useState } from "react";
-import useFetchData from "../../hooks/fetch";
-import Pagination1 from "../../components/pagination/pagination";
+
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 
 const API_KEY = "41ee00ef54c639e104c9b60ce5d3736b";
-const BASE_URL = "https://api.themoviedb.org/3/";
-const DESIRED_COUNT = 18;
+const BASE_URL = "https://api.themoviedb.org/3";
 
 const Multfilmlar = () => {
-  const [page, setPage] = useState(1);
-  // https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=16
-  const { data: shows, loading, error } = useFetchData("discover/movie", {
-    desiredCount: 16,
-    page
-  });
+  const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchAnimatedMovies = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(
+          `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=16&sort_by=popularity.desc`
+        );
+        setMovies(response.data.results || []);
+      } catch (err) {
+        setError("Error fetching animated movies.");
+        console.error("Error fetching animated movies:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAnimatedMovies();
+  }, []);
+
   return (
     <div className="container">
+      {loading && <h1 className="loading">Loading...</h1>}
+      {error && <h1 className="error">{error}</h1>}
+      {!loading && !error && (
         <div className="cards1">
-          {shows.map((movie) => (
+          {movies.map((movie) => (
             <div className="card1" key={movie.id}>
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -27,7 +48,7 @@ const Multfilmlar = () => {
             </div>
           ))}
         </div>
-        <Pagination1 count={100} onPageChange={setPage} />
+      )}
     </div>
   );
 };
