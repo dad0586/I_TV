@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const API_KEY = "41ee00ef54c639e104c9b60ce5d3736b";
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -41,14 +41,14 @@ const Multfilmlar = () => {
       {!loading && !error && (
         <div className="cards1">
           {movies.map((movie) => (
-            <div className="card1" key={movie.id} onClick={() => handleMovieClick(movie.id)}>
+            <Link className="card1" key={movie.id} onClick={() => handleMovieClick(movie.id)}>
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
                 className="card-image1"
               />
               <h3 className="card-title1">{movie.title}</h3>
-            </div>
+            </Link>
           ))}
         </div>
       )}

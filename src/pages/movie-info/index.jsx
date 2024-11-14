@@ -25,13 +25,10 @@ const DetailPage = () => {
                     <p><strong>Chiqarilgan sana:</strong> {item?.release_date || item?.first_air_date}</p>
                 </div>
             </div>
-
-            {/* O'xshash kinolar / seriallar */}
             <SimilarMedia type={type} id={id} />
         </div>
     );
 };
-
 const SimilarMedia = ({ type, id }) => {
     const { data: similarItems } = useFetchData(`${type}/${id}/similar`);
 
