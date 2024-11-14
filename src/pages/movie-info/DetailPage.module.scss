@@ -1,0 +1,39 @@
+.detailContainer {
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainContent {
+    display: flex;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.poster {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.info {
+    max-width: 500px;
+}
+
+.similarContainer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.similarCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.similarCard {
+    width: 150px;
+    text-align: center;
+    color: wheat;
+}

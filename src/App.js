@@ -9,7 +9,7 @@ import Obunalar from "./pages/obunalar/index"
 import Boshqalar from "./pages/boshqalar/index"
 import TV from "./pages/tv";
 import Footer from "./layout/footer/footer";
-import MovieInfo from "./pages/movie-info";
+import DetailPage from "./pages/movie-info";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Route path="/multfilmlar" element={<Multfilmlar />} />
         <Route path="/obunalar" element={<Obunalar />} />
         <Route path="/boshqalar" element={<Boshqalar />} />
-        <Route path="/movie/:movieId" element={<MovieInfo />} />
+        <Route path="/:type/:id" element={<DetailPage />} />
       </Routes>
       <Footer/>
     </>

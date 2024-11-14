@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "../boshsahifa/main.scss";
 import useFetchData from "../../hooks/fetch";
 import Pagination1 from "../../components/pagination/pagination.jsx";
+import { Link } from "react-router-dom";
 
 const Bosh_sahifa = () => {
     const [page, setPage] = useState(1);
@@ -19,17 +20,15 @@ const Bosh_sahifa = () => {
             <div className="container">
                 <div className="cards1">
                     {shows?.map((product) => (
-                        <div className="card1" key={product.id}>
+                        <Link to={`/movie/${product?.id}`} className="card1" key={product.id}>
                             <img
                                 src={"https://image.tmdb.org/t/p/w500" + product?.poster_path}
-                                alt=""
+                                alt={product?.title}
                             />
-                            <h3 style={{ color: "wheat" }} className="card-title1">
-                                {product.title}
-                            </h3>
-                            <p className="card-text1">{product.description}</p>
-                        </div>
+                            <h3 className="card-title1">{product.title}</h3>
+                        </Link>
                     ))}
+
                 </div>
             </div>
 
