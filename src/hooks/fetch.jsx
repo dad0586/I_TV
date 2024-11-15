@@ -37,6 +37,8 @@ const useFetchData = (endpoint, options = {}) => {
         }
 
         setData(resultData);
+        console.log(resultData,'resultData');
+        
       } catch (err) {
         setError("Error fetching data.");
       } finally {
