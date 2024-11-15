@@ -1,0 +1,59 @@
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .info_change {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .info_right img {
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+  }
+  
+  .info_right img:hover {
+    transform: scale(1.05);
+  }
+  
+  .info_left {
+    flex: 2;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .movie-info_title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b79494;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  
+  .info_left p {
+    font-size: 1rem;
+    color: #b79494;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .chiqarilgan_sana {
+
+    font-weight: bold;
+    color: #b79494;
+  }

@@ -10,7 +10,7 @@
 
 .card1 {
   width: 23%;
-  background-color: #ca3636;
+  background-color: green;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -19,6 +19,7 @@
   color: #333;
   margin-top: 30px;
   cursor: pointer;
+
 
   &:hover {
     transform: translateY(-10px);

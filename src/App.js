@@ -9,7 +9,8 @@ import Obunalar from "./pages/obunalar/index"
 import Boshqalar from "./pages/boshqalar/index"
 import TV from "./pages/tv";
 import Footer from "./layout/footer/footer";
-import DetailPage from "./pages/movie-info";
+import DetailPage from "./components/movie-info";
+
 
 function App() {
   return (
